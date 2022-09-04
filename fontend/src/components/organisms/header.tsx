@@ -1,13 +1,16 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import SearchBar from "../molecules/searchbar";
 import { styled } from "@mui/styles";
 import { Button } from "@mui/material";
+import { useAuth0 } from "@auth0/auth0-react";
+import Profile from "./profile";
 
 const NavMenu = styled(Button)({
     cursor: "pointer",
     border: "none",
     backgroundColor: "transparent",
-    textDecoration: "none"
+    textDecoration: "none",
+    color: "transparent",
 });
 
 const Nav = styled("nav")({
@@ -21,6 +24,13 @@ const Nav = styled("nav")({
 })
 
 export default function Header() {
+    const { user, isAuthenticated, loginWithRedirect } = useAuth0();
+    const [isDropdownOpen, setDropdownOpen] = useState<boolean>(false);
+    
+    useEffect(() => {
+        console.log(isDropdownOpen);
+    }, [isDropdownOpen]);
+
     return(
     <Nav>
         <img src="logo_stretch.png" alt=""/>
@@ -34,6 +44,8 @@ export default function Header() {
             About Us
         </NavMenu>
         <SearchBar/>
+            {(!isAuthenticated)? <NavMenu onClick={() => loginWithRedirect()}>Login</NavMenu> : <NavMenu onClick={() => setDropdownOpen(!isDropdownOpen)}>Hello {user?.name}</NavMenu>}
+            {isDropdownOpen && <Profile/>}
     </Nav>
     );
 }
