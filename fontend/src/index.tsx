@@ -11,8 +11,8 @@ const App = () => (
 ReactDOM.render(
   <React.StrictMode>
     <Auth0Provider
-    domain="dev-5tlo9w2s.us.auth0.com"
-    clientId="TNwWYOAgumPXBkkguOcjijXjfEikLO9S"
+    domain="dev-xjyqxwum.us.auth0.com"
+    clientId="QSsAajkyHG1uZG99r9k9wqcFHwrSPBau"
     redirectUri={"http://localhost:4000/"}
   >
     <App />

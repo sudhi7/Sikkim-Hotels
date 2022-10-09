@@ -1,0 +1,46 @@
+{
+    "homestays" : [
+        {
+            "id": 1,
+            "name": "Khambu khim",
+            "address": {
+                "street-address": "Khecheopalri old Gumpa",
+                "location": "Ganglay West Sikkim",
+                "city": "Gangtok",
+                "state": "Sikkim",
+                "zipcode": ""
+            },
+            "guests": 14,
+            "bedrooms": 7,
+            "bathrooms": 1,
+            "rating": 5,
+            "reviews": 1,
+            "photos": [],
+            "price": 1500,
+            "amenities": ["table", "mobile USB", "bed"],
+            "checkin-time": "12:00 PM",
+            "checkout-time": "11:00 AM"
+        },
+        {
+            "id": 2,
+            "name": "Lake View Nest Homestay",
+            "address": {
+                "street-address": "Khecheopalri old Gumpa",
+                "location": "Ganglay West Sikkim",
+                "city": "Gangtok",
+                "state": "Sikkim",
+                "zipcode": ""
+            },
+            "guests": 10,
+            "bedrooms": 5,
+            "bathrooms": 5,
+            "rating": 5,
+            "reviews": 1,
+            "photos": [],
+            "price": 3000,
+            "amenities": ["table", "mobile USB", "bed"],
+            "checkin-time": "12:00 PM",
+            "checkout-time": "11:00 AM"
+        }
+    ]
+}

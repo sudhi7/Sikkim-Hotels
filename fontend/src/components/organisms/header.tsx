@@ -38,10 +38,16 @@ export default function Header() {
             Home
         </NavMenu>
         <NavMenu>
-            Hotels
+            Homestays
         </NavMenu>
         <NavMenu>
-            About Us
+            Explore
+        </NavMenu>
+        <NavMenu>
+            Tours
+        </NavMenu>
+        <NavMenu>
+            Contact Us
         </NavMenu>
         <SearchBar/>
             {(!isAuthenticated)? <NavMenu onClick={() => loginWithRedirect()}>Login</NavMenu> : <NavMenu onClick={() => setDropdownOpen(!isDropdownOpen)}>Hello {user?.name}</NavMenu>}

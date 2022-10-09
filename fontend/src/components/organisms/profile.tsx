@@ -37,7 +37,7 @@ export default function Profile() {
     return(
         <Dropdown>
             <Button>Profile</Button>
-            <Button onClick={() => logout({ returnTo: "http://localhost:4000/logout" })}>Logout</Button>
+            <Button onClick={() => {logout({ returnTo: "http://localhost:4000/" }); alert("Logged out successfully!!");}}>Logout</Button>
         </Dropdown>
     );
 }
